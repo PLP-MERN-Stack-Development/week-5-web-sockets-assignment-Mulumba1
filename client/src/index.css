@@ -1,0 +1,136 @@
+/* client/src/index.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1, h3 {
+  color: #2c3e50;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Chat-specific styles for App.jsx */
+.chat-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.messages-box {
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.message {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.message strong {
+  color: #4a90e2;
+}
+
+.message.system {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.message.private {
+  background-color: #fffacd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-left: 3px solid orange;
+}
+
+.message-input-area {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.message-input-area input {
+  flex-grow: 1;
+}
+
+.user-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+.user-list h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #bdc3c7;
+}
+
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+.user-list li span {
+  font-weight: bold;
+  color: #27ae60; /* Green for active users */
+}
